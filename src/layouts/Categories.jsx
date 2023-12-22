@@ -5,17 +5,11 @@ export default function Categories() {
     return (
         <div><Menu pointing vertical>
             <Menu.Item
-                name='home'
-
-            />
+                name='Laptop' />
             <Menu.Item
-                name='messages'
-
-            />
+                name='Elektronik Ev Aletleri' />
             <Menu.Item
-                name='friends'
-
-            />
+                name='Akıllı Saatler' />
         </Menu></div>
     )
 }
