@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Icon, Menu, Table } from 'semantic-ui-react'
 import ProductService from '../services/productService'
+import Categories from '../layouts/Categories';
 
 export default function ProductList() {
 
 
     const [porducts, setProducts] = useState([]);
 
-   useEffect(( ) => {
-    let productSerice = new ProductService()
-    productSerice.getProducts().then(result=>setProducts(result.data.data))
+    useEffect(() => {
+        let productSerice = new ProductService()
+        productSerice.getProducts().then(result => setProducts(result.data.data))
 
-   });
+    }, []);
 
 
     return (
@@ -21,7 +22,6 @@ export default function ProductList() {
                     <Table.Row>
                         <Table.HeaderCell>Ürün Adı</Table.HeaderCell>
                         <Table.HeaderCell>Tanımı</Table.HeaderCell>
-                        <Table.HeaderCell>Fotoğraf</Table.HeaderCell>
                         <Table.HeaderCell>Fiyat</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
@@ -31,7 +31,6 @@ export default function ProductList() {
                             <Table.Row>
                                 <Table.Cell>{product.name}</Table.Cell>
                                 <Table.Cell>{product.description}</Table.Cell>
-                                <Table.Cell>{product.pictureUrl}</Table.Cell>
                                 <Table.Cell>{product.price}</Table.Cell>
                             </Table.Row>
                         ))
