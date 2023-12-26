@@ -9,8 +9,8 @@ export default function ProductList() {
     const [porducts, setProducts] = useState([]);
 
     useEffect(() => {
-        let productSerice = new ProductService()
-        productSerice.getProducts().then(result => setProducts(result.data.data))
+        let productService = new ProductService()
+        productService.getProducts().then(result => setProducts(result.data.data))
 
     }, []);
 
