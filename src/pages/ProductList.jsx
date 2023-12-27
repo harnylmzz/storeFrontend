@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Icon, Menu, Table } from 'semantic-ui-react'
 import ProductService from '../services/productService'
-import Categories from '../layouts/Categories';
+import { Link } from 'react-router-dom';
 
 export default function ProductList() {
-
 
     const [porducts, setProducts] = useState([]);
 
@@ -13,7 +12,6 @@ export default function ProductList() {
         productService.getProducts().then(result => setProducts(result.data.data))
 
     }, []);
-
 
     return (
         <div>
@@ -29,7 +27,7 @@ export default function ProductList() {
                     {
                         porducts.map((product) => (
                             <Table.Row>
-                                <Table.Cell>{product.name}</Table.Cell>
+                                <Table.Cell><Link to={`/products/${product.id}`}>{product.name}</Link></Table.Cell>
                                 <Table.Cell>{product.description}</Table.Cell>
                                 <Table.Cell>{product.price}</Table.Cell>
                             </Table.Row>
