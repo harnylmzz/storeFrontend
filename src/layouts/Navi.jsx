@@ -25,7 +25,9 @@ export default function Navi() {
         <div>
             <Menu inverted fixed="top">
                 <Container>
-                    <Menu.Item name='home' />
+    
+                    <Menu.Item style={{color: 'yellow'}} name='SARI' />
+                    <Menu.Item name='Anasayfa' />
                     <Menu.Item name='Bildirimler' />
                     <Menu.Menu position='right'>
                         <CartSummary />
