@@ -27,8 +27,12 @@ export default function Navi() {
     <div>
       <Menu inverted fixed="top">
         <Container>
+          <Menu.Item>
+          <img alt="logo" src="images/logo/logo.png" />
+          </Menu.Item>
           <Menu.Item name="Anasayfa" />
           <Menu.Item name="Bildirimler" />
+          <Menu.Item name="Mesajlar" />
           <Menu.Menu position="right">
             {cartItems.length > 0 && <CartSummary />}
             {isAuthenticated ? (

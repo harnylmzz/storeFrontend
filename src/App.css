@@ -7,12 +7,21 @@
 }
 
 .App {
-  background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-size: cover;
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png");
   background-attachment: fixed;
+  background-size: cover;
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
 }
+
 
 .ui.main.container {
   margin-top: 4em;
 }
+
+
+
+
+
 
