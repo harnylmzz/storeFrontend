@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import CategoryService from "../services/categoryService";
 import {
     CardMeta,
     CardHeader,
@@ -15,7 +17,6 @@ import {
 export default function CategoryDetail() {
   let { id } = useParams();
   
-
   return (
     <div>
       <CardGroup>
