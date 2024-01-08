@@ -8,4 +8,5 @@ export default class ProductService {
   getProductById(id) {
     return axios.get("http://localhost:8080/api/v1/products/getById?id=" + id);
   }
+
 }
